@@ -1,6 +1,6 @@
-Feature: kedro-starter-pyspark
+Feature: kedro-starter-pyspark-iris
 
-  Scenario: Run a Kedro project created from kedro-starter-pyspark
+  Scenario: Run a Kedro project created from kedro-starter-pyspark-iris
     Given I have prepared a config file
     And I have run a non-interactive kedro new with the starter
     And I have installed the Kedro project's dependencies
