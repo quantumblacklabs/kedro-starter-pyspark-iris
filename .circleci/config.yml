@@ -29,7 +29,6 @@ commands:
           key: deps9-<< parameters.python_version >>-{{ checksum "test_requirements.txt" }}
       - run:
           command: |
-            sudo pip install -U wheel
             sudo pip install -r test_requirements.txt
       - save_cache: # cache Python dependencies using checksum of Pipfile as the cache-key
           key: deps9-<< parameters.python_version >>-{{ checksum "test_requirements.txt" }}
