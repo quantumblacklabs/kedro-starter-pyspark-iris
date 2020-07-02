@@ -1,9 +1,6 @@
 version: 2.1
 
 executors:
-  py38:
-    docker:
-      - image: circleci/python:3.8
   py37:
     docker:
       - image: circleci/python:3.7
@@ -42,18 +39,18 @@ commands:
 
 jobs:
   security_scan:
-    executor: py38
+    executor: py37
     steps:
       - setup_requirements:
-          python_version: "python3.8"
+          python_version: "python3.7"
       - run:
           command: bandit -ll -r .
   lint:
-    executor: py38
+    executor: py37
     description: Lint the project
     steps:
       - setup_requirements:
-          python_version: "python3.8"
+          python_version: "python3.7"
       - run:
           command: |
             isort -rc .
