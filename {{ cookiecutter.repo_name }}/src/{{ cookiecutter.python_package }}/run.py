@@ -37,8 +37,6 @@ from kedro.pipeline import Pipeline
 from pyspark import SparkConf
 from pyspark.sql import SparkSession
 
-from {{ cookiecutter.python_package }}.pipeline import create_pipelines
-
 
 class ProjectContext(KedroContext):
     """Users can override the remaining methods from the parent class here,
@@ -75,9 +73,6 @@ class ProjectContext(KedroContext):
     # `project_version` is the version of kedro used to generate the project
     project_version = "{{ cookiecutter.kedro_version }}"
     package_name = "{{ cookiecutter.python_package }}"
-
-    def _get_pipelines(self) -> Dict[str, Pipeline]:
-        return create_pipelines()
 
 
 def run_package():
