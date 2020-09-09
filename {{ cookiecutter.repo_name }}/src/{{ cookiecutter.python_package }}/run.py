@@ -69,11 +69,6 @@ class ProjectContext(KedroContext):
         _spark_session = spark_session_conf.getOrCreate()
         _spark_session.sparkContext.setLogLevel("WARN")
 
-    project_name = "{{ cookiecutter.project_name }}"
-    # `project_version` is the version of kedro used to generate the project
-    project_version = "{{ cookiecutter.kedro_version }}"
-    package_name = "{{ cookiecutter.python_package }}"
-
 
 def run_package():
     # Entry point for running a Kedro project packaged with `kedro package`
