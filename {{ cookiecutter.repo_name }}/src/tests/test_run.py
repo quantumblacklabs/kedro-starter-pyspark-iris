@@ -49,7 +49,7 @@ def project_context():
 
 class TestProjectContext:
     def test_project_name(self, project_context):
-        assert project_context.project_name == "spark_iris"
+        assert project_context.project_name == "{{ cookiecutter.project_name }}"
 
     def test_project_version(self, project_context):
-        assert project_context.project_version == "0.16.2"
+        assert project_context.project_version == "{{ cookiecutter.kedro_version }}"
