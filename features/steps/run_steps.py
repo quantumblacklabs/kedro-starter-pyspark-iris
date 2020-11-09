@@ -40,7 +40,7 @@ def create_project_from_config_file(context):
             str(context.config_file),
             "--starter",
             context.starter_path,
-        ]
+        ], cwd=context.temp_dir
     )
     assert res.returncode == OK_EXIT_CODE
 
