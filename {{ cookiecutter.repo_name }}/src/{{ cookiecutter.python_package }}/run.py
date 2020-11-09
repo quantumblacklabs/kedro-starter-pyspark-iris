@@ -27,12 +27,10 @@
 # limitations under the License.
 
 """Application entry point."""
-import getpass
 from pathlib import Path
 from typing import Any, Dict, Union
 
 from kedro.framework.context import KedroContext, load_package_context
-from kedro.pipeline import Pipeline
 
 from pyspark import SparkConf
 from pyspark.sql import SparkSession
