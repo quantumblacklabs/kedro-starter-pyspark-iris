@@ -4,13 +4,15 @@
 
 The code in this repository demonstrates best practice when working with Kedro and PySpark. It contains a Kedro starter template with some initial configuration and an example pipeline, and originates from the [Kedro documentation about how to work with PySpark](https://kedro.readthedocs.io/en/stable/11_tools_integration/01_pyspark.html).
 
-## Installation
+## Getting started
 
-The starter template can be installed using the `cookiecutter` package:
+The starter template can be used to start a new project using the [`starter` option](https://kedro.readthedocs.io/en/stable/02_get_started/06_starters.html) in `kedro new`:
 
 ```bash
-cookiecutter gh:quantumblacklabs/kedro-starter-pyspark-iris
+kedro new --starter=pyspark-iris
 ```
+
+As a reference, the [How to use Kedro on a Databricks cluster](https://kedro.readthedocs.io/en/stable/11_tools_integration/03_databricks.html#prerequisites) tutorial bootstraps the project using this starter.
 
 ## Features
 
@@ -29,7 +31,7 @@ Out of the box, Kedro's `MemoryDataSet` works with Spark's `DataFrame`. However,
 
 ### An example machine learning pipeline that uses only `PySpark` and `Kedro`
 
-![](./images/spark_iris_pipeline.png)
+![Iris Pipeline Visualisation](./images/spark_iris_pipeline.png)
 
 This Kedro starter uses the simple and familiar [Iris dataset](https://www.kaggle.com/uciml/iris). It contains the code for an example machine learning pipeline that trains a random forest classifier to classify an iris. 
 
