@@ -12,7 +12,7 @@ The starter template can be used to start a new project using the [`starter` opt
 kedro new --starter=pyspark-iris
 ```
 
-As a reference, the [How to use Kedro on a Databricks cluster](https://kedro.readthedocs.io/en/stable/11_tools_integration/03_databricks.html#prerequisites) tutorial bootstraps the project using this starter.
+As a reference, the [How to use Kedro on a Databricks cluster](https://github.com/quantumblacklabs/kedro/blob/develop/docs/source/10_deployment/08_databricks.md) tutorial bootstraps the project using this starter.
 
 ## Features
 
